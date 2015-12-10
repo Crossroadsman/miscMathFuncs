@@ -1,3 +1,12 @@
+#if os(OSX) || os(iOS) || os(watchOS) || os(tvOS)
+import Darwin
+#else
+import Glibc
+#endif
+/*
+ the import statement is necessary to get pow/sqrt
+ */
+
 func fib(n: Int) -> Int {
     
     let d = Double(n)
