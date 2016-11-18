@@ -14,6 +14,12 @@ extension Double {
 
 }
 
+extension Int {
+    func factorial() -> Int {
+        return (1 ... self).reduce(1) {$0 * $1}
+    }
+}
+
 /**
  WARNING: because this uses factorial(), it becomes computationally infeasible very quickly.
  
